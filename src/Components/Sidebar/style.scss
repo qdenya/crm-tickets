@@ -1,0 +1,105 @@
+body {
+    font-family: 'Museo Sans';
+    background: #F7F7F7;
+}
+
+.sidebar {
+    position: fixed;
+    width: 340px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: #F7F7F7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px 40px 20px 30px;
+        height: calc(100% - 70px);
+    }
+    &_user {
+        display: flex;
+        align-items: center;
+        padding: 5px 10px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        &_photo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            &_img {
+                width: 100%;
+            }
+        }
+        &_info {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            
+            &_name {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #000000;
+            }
+            &_position {
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 17px;
+                color: #000000;
+            }
+        }
+    }
+    &_menu {
+        display: flex;
+        flex-direction: column;
+        margin-top: 45px;
+        &_item {
+            display: flex;
+            align-items: center;
+            padding: 8px 24px;
+            transition: .3s;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            margin-bottom: 15px;
+            svg path {
+                transition: .3s;
+            }
+            &_text {
+                margin-left: 15px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #75808A;
+                transition: .3s;
+            }
+            &_active {
+                background: #ffffff;
+                svg path {
+                    fill: #2D66E3;
+                }
+                span {
+                    color: #2D66E3;
+                }
+            }
+        }
+        &_item:hover {
+            background: #dadada;
+        }
+        &_item:active {
+            background: #c6c6c6;
+        }
+        &_item:hover svg path {
+            fill: #2D66E3;
+        }
+        &_item:hover span {
+            color: #2D66E3;
+        }
+    }
+    &_logo {
+        margin-bottom: 0;
+        margin-top: auto;
+    }
+}
